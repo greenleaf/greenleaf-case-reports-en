@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greenleaf Case Reports — Real Patients, Real Treatment Stories</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FFFFFF;
+    --bg-warm: #FAFAF6;
+    --lime: #B5CF37;
+    --lime-soft: #EEF3D8;
+    --salmon: #EB7055;
+    --salmon-soft: #FCEAE4;
+    --ink: #22261A;
+    --text-2: #5B6152;
+    --text-3: #8B9180;
+    --border: #E7E7DE;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Mulish', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 32px; border-bottom: 1px solid var(--border);
+  }
+  .brand { font-weight: 800; font-size: 15px; letter-spacing: 0.02em; }
+  .brand span { color: var(--lime); }
+  .topbar-link { font-size: 13px; font-weight: 700; color: var(--ink); background: var(--lime-soft); padding: 8px 16px; border-radius: 100px; }
+  .topbar-link:hover { background: var(--lime); }
+
+  /* Hero */
+  .hero { max-width: 760px; margin: 0 auto; padding: 76px 24px 8px; }
+  .hero-eyebrow {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--salmon); margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 44px; font-weight: 800; line-height: 1.2; letter-spacing: -0.015em;
+    margin: 0 0 22px; max-width: 15ch;
+  }
+  .hero p { font-size: 17px; color: var(--text-2); line-height: 1.65; margin: 0 0 36px; max-width: 54ch; }
+
+  .search-box {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--bg-warm); border: 1px solid var(--border); border-radius: 14px;
+    padding: 0 18px; height: 56px; max-width: 560px;
+  }
+  .search-box svg { flex-shrink: 0; opacity: 0.5; }
+  .search-box input {
+    border: none; background: transparent; outline: none; flex: 1;
+    font-family: 'Mulish', sans-serif; font-size: 16px; color: var(--ink); height: 100%;
+  }
+  .search-box input::placeholder { color: var(--text-3); }
+  .search-box button {
+    flex-shrink: 0; font-family: 'Mulish', sans-serif; font-weight: 700; font-size: 14px;
+    background: var(--ink); color: #fff; border: none; padding: 11px 20px; border-radius: 10px; cursor: pointer;
+  }
+  .search-hint { font-size: 13px; color: var(--text-3); margin-top: 12px; }
+
+  /* Category tiles */
+  section.categories { max-width: 760px; margin: 0 auto; padding: 72px 24px 8px; }
+  .section-label {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-3); margin-bottom: 18px;
+  }
+  .cat-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+    background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden;
+  }
+  .cat-tile {
+    background: var(--bg); padding: 20px 22px; display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; font-weight: 700; font-size: 15px;
+  }
+  .cat-tile:hover { background: var(--lime-soft); color: #4A5A18; }
+  .cat-tile .arrow { opacity: 0.35; font-weight: 400; }
+  .cat-tile:hover .arrow { opacity: 1; }
+
+  /* Recent cases */
+  section.recent { max-width: 760px; margin: 0 auto; padding: 72px 24px 8px; }
+  .recent-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 4px; }
+  .recent-head a { font-size: 13px; font-weight: 700; color: var(--salmon); }
+  .case-row {
+    padding: 18px 2px; border-bottom: 1px solid var(--border); display: block;
+  }
+  .case-row:hover .case-title { color: var(--lime); }
+  .case-title-row { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+  .case-title { font-size: 15.5px; font-weight: 700; color: var(--ink); }
+  .weeks-badge { flex-shrink: 0; font-size: 12px; font-weight: 700; color: var(--salmon); background: var(--salmon-soft); padding: 3px 11px; border-radius: 100px; white-space: nowrap; }
+  .case-summary { font-size: 13.5px; color: var(--text-2); margin-top: 5px; line-height: 1.5; }
+  .case-cat { font-size: 12px; color: var(--text-3); margin-top: 7px; font-weight: 600; }
+
+  /* Philosophy strip */
+  section.principle { max-width: 760px; margin: 0 auto; padding: 84px 24px; }
+  .principle-box {
+    background: var(--ink); color: #fff; border-radius: 20px; padding: 44px 36px;
+  }
+  .principle-box p.big {
+    font-size: 22px; font-weight: 700; line-height: 1.5; margin: 0 0 16px;
+  }
+  .principle-box p.small { font-size: 14.5px; color: #C7CBBB; line-height: 1.6; margin: 0; max-width: 50ch; }
+
+  /* CTA */
+  section.cta { max-width: 760px; margin: 0 auto; padding: 8px 24px 90px; text-align: center; }
+  .cta p { font-size: 15px; color: var(--text-2); margin: 0 0 16px; }
+  .cta a.button {
+    display: inline-block; background: var(--salmon); color: #fff; text-decoration: none;
+    font-weight: 700; font-size: 15px; padding: 14px 30px; border-radius: 100px;
+  }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 32px; text-align: center; }
+  footer p { font-size: 12.5px; color: var(--text-3); margin: 0; }
+
+  @media (max-width: 640px) {
+    .topbar { padding: 16px 20px; }
+    .hero { padding: 48px 20px 4px; }
+    .hero h1 { font-size: 30px; max-width: none; }
+    .cat-grid { grid-template-columns: 1fr; }
+    section.categories, section.recent, section.principle, section.cta { padding-left: 20px; padding-right: 20px; }
+    .principle-box { padding: 32px 24px; }
+    .principle-box p.big { font-size: 19px; }
+  }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <a class="brand" href="index.html">Greenleaf <span>Case Reports</span></a>
+    <a class="topbar-link" href="reports.html">Browse All Cases</a>
+  </div>
+
+  <div class="hero">
+    <div class="hero-eyebrow">35 Real Patient Cases</div>
+    <h1>You're not the first person with this problem.</h1>
+    <p>Every case here follows one real patient — what they came in with, why the usual approach didn't work, and what actually helped. Search by symptom to find the one that sounds like you.</p>
+    <form class="search-box" onsubmit="event.preventDefault(); goSearch();">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="heroQ" type="text" placeholder="Try a symptom — e.g. insomnia, stomach, headache">
+      <button type="submit">Search</button>
+    </form>
+    <div class="search-hint">Or browse by condition below.</div>
+  </div>
+
+  <section class="categories">
+    <div class="section-label">Browse by Condition</div>
+    <div class="cat-grid" id="catGrid"></div>
+  </section>
+
+  <section class="recent">
+    <div class="recent-head">
+      <div class="section-label" style="margin-bottom:0;">Recently Added Cases</div>
+      <a href="reports.html">See all 35 &rarr;</a>
+    </div>
+    <div id="recentList"></div>
+  </section>
+
+  <section class="principle">
+    <div class="principle-box">
+      <p class="big">We're not here to tell you we're the best.</p>
+      <p class="small">We're here to show you we understand why you're worried — and exactly how we approach it. Every case on this site is a real patient, described the way they described themselves.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <p>Wondering if your symptoms follow a similar pattern?</p>
+    <a class="button" href="https://greenleafacuclinic.janeapp.com/">Book a Consultation</a>
+  </section>
+
+  <footer>
+    <p>Greenleaf Acupuncture &amp; Herb Clinic — Downtown Vancouver</p>
+  </footer>
+
+<script>
+const CATEGORY_ORDER = [
+  "Mental Health","Fertility","Uterine Conditions","Pain","Digestive Issues",
+  "Men's Health","Skin Conditions","Pediatrics","Cancer & Chemotherapy","ENT (Ear, Nose & Throat)"
+];
+
+function goSearch(){
+  const q = document.getElementById('heroQ').value.trim();
+  window.location.href = 'reports.html' + (q ? ('?q=' + encodeURIComponent(q)) : '');
+}
+
+async function init(){
+  let cases = [];
+  try {
+    const res = await fetch('cases.json');
+    cases = await res.json();
+  } catch(e) {
+    document.getElementById('recentList').innerHTML = '<div class="case-row"><div class="case-summary">Could not load cases.json — this page needs to be served over http, not opened directly as a file.</div></div>';
+    document.getElementById('catGrid').innerHTML = '';
+    return;
+  }
+
+  // Category tiles — only show categories that currently have cases
+  const grid = document.getElementById('catGrid');
+  const present = CATEGORY_ORDER.filter(cat => cases.some(c => c.cat === cat));
+  grid.innerHTML = present.map(cat => {
+    const count = cases.filter(c => c.cat === cat).length;
+    return `<a class="cat-tile" href="reports.html?cat=${encodeURIComponent(cat)}">${cat} <span class="arrow">(${count}) &rarr;</span></a>`;
+  }).join('');
+
+  // Recent cases — last 3 entries in cases.json
+  const recent = cases.slice(-3).reverse();
+  document.getElementById('recentList').innerHTML = recent.map(c => `
+    <a class="case-row" href="cases/${c.slug}.html">
+      <div class="case-title-row">
+        <span class="case-title">${c.title}</span>
+        <span class="weeks-badge">Recovered in ${c.weeks}</span>
+      </div>
+      <div class="case-summary">${c.summary}</div>
+      <div class="case-cat">${c.cat}</div>
+    </a>
+  `).join('');
+}
+init();
+</script>
+</body>
+</html>
