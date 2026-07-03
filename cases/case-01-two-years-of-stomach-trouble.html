@@ -56,6 +56,16 @@
   article { font-size: 16.5px; line-height: 1.85; color: #363B2B; }
   article p { margin: 0 0 22px; }
   article strong { font-weight: 700; color: var(--ink); }
+  article h2.case-head {
+    display: flex; align-items: baseline; gap: 12px;
+    font-size: 20px; font-weight: 800; letter-spacing: -0.01em; color: var(--ink);
+    line-height: 1.4; margin: 52px 0 20px;
+  }
+  article h2.case-head::before {
+    content: ''; flex-shrink: 0; width: 20px; height: 3px; border-radius: 2px;
+    background: var(--salmon); margin-top: 12px;
+  }
+  article h2.case-head:first-of-type { margin-top: 40px; }
   article h2, article strong:has(+ br) { }
   article ul { margin: 0 0 22px; padding-left: 20px; }
   article li { margin-bottom: 10px; }
@@ -64,6 +74,23 @@
   .section-head {
     font-size: 13px; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase;
     color: var(--salmon); margin: 8px 0 16px; display: block;
+  }
+  .herb-table { width: 100%; border-collapse: collapse; margin: 0 0 22px; font-size: 15px; }
+  .herb-table thead th {
+    text-align: left; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text-3); font-weight: 700; padding: 0 16px 10px 0; border-bottom: 1px solid var(--border);
+  }
+  .herb-table td {
+    padding: 16px 16px 16px 0; border-bottom: 1px solid var(--border);
+    vertical-align: top; line-height: 1.6; color: #363B2B;
+  }
+  .herb-table tr:last-child td { border-bottom: none; }
+  .herb-table td:first-child {
+    width: 160px; font-weight: 800; color: var(--ink); white-space: nowrap;
+  }
+  .herb-table .pinyin {
+    display: block; font-size: 12.5px; font-weight: 500; color: var(--text-3);
+    margin-top: 2px; white-space: normal;
   }
   .cta {
     max-width: 680px; margin: 0 auto; padding: 32px 24px 80px; text-align: center;
@@ -74,7 +101,7 @@
   }
   .cta-box p { font-size: 16px; font-weight: 700; margin: 0 0 18px; }
   .cta-box a {
-    display: inline-block; background: var(--ink); color: #fff; font-weight: 700;
+    display: inline-block; background: var(--salmon); color: #fff; font-weight: 700;
     font-size: 14px; padding: 13px 28px; border-radius: 100px;
   }
   footer { text-align: center; padding: 24px; font-size: 12.5px; color: var(--text-3); border-top: 1px solid var(--border); }
@@ -83,6 +110,12 @@
     main { padding: 40px 20px 24px; }
     h1 { font-size: 24px; }
     article { font-size: 15.5px; }
+    article h2.case-head { font-size: 17.5px; margin: 40px 0 16px; }
+    .herb-table thead { display: none; }
+    .herb-table, .herb-table tbody, .herb-table tr, .herb-table td { display: block; width: auto; }
+    .herb-table tr { padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .herb-table td { padding: 2px 0; border-bottom: none; white-space: normal; }
+    .herb-table td:first-child { margin-bottom: 6px; }
   }
 </style>
 </head>
@@ -105,11 +138,11 @@
 <p>Then she said something that stuck with me.</p>
 <p>"Right here" — she pointed just below her breastbone — "it's like there's a butterfly flapping around. I don't know how else to describe it."</p>
 <p>Not quite pain. Not quite nothing. Just enough to keep bothering her.</p>
-<p><strong>Reading the whole pattern, not just the complaint</strong></p>
+<h2 class="case-head">Reading the whole pattern, not just the complaint</h2>
 <p>This is where the thinking in the room shifts. A stomach that won't settle doesn't automatically mean reaching for something to settle the stomach. The real question is what pattern this particular stomach trouble is sitting inside of.</p>
 <p>With Michelle, several threads pointed the same direction. She was running to the bathroom every hour. She worried constantly. Her lips were dry, and she'd get a bitter taste in her mouth now and then. There was tenderness along her side when I pressed. And, of course, the butterfly.</p>
 <p>Put simply: her body was stuck with the alarm on. The racing thoughts, the broken sleep, the frequent urination, the fluttering under the ribs — these weren't five separate problems. They were one system running hot. When the body's threat response won't switch off, muscles stay braced, the bladder gets twitchy, and digestion — never a priority in emergency mode — gets shoved to the back of the line. Of course her stomach wasn't working properly. It wasn't supposed to be, not with the alarm going off around the clock.</p>
-<p><strong>The prescription, three weeks later</strong></p>
+<h2 class="case-head">The prescription, three weeks later</h2>
 <p>I gave her a formula built to turn that alarm off. Three weeks, three times a day.</p>
 <p>She came back a different person.</p>
 <p>"The indigestion's gone. No more heartburn. I'm not running to the bathroom every hour anymore. And I'm sleeping — I don't wake up at one anymore."</p>
@@ -121,12 +154,15 @@
 <hr />
 <span class="section-head">The Herbs Behind This Formula</span>
 <p>The formula I prescribed here is built around a few key ingredients:</p>
-<ul>
-<li><strong>Bupleurum (Chai Hu)</strong> — the anchor of this formula. It's the herb most associated with easing the kind of chronic tension the body holds onto under prolonged stress.</li>
-<li><strong>Poria (Fu Ling)</strong> — a fungus that grows around pine roots, traditionally used to clear excess fluid retention and calm the mind. It shows up often in people with frequent urination and a restless, worry-prone temperament.</li>
-<li><strong>Pinellia (Ban Xia)</strong> — used to relieve that stuck, congested feeling around the upper abdomen.</li>
-<li><strong>Ginseng, jujube (red date), licorice root, and ginger</strong> — supporting players rather than the stars. They replenish energy and help the other herbs work together smoothly instead of fighting each other.</li>
-</ul>
+<table class="herb-table">
+<thead><tr><th>Herb</th><th>What It Does</th></tr></thead>
+<tbody>
+<tr><td>Bupleurum<span class="pinyin">Chai Hu</span></td><td>The anchor of this formula. It's the herb most associated with easing the kind of chronic tension the body holds onto under prolonged stress.</td></tr>
+<tr><td>Poria<span class="pinyin">Fu Ling</span></td><td>A fungus that grows around pine roots, traditionally used to clear excess fluid retention and calm the mind. It shows up often in people with frequent urination and a restless, worry-prone temperament.</td></tr>
+<tr><td>Pinellia<span class="pinyin">Ban Xia</span></td><td>Used to relieve that stuck, congested feeling around the upper abdomen.</td></tr>
+<tr><td>Ginseng, jujube, licorice root &amp; ginger<span class="pinyin">Supporting herbs</span></td><td>Supporting players rather than the stars. They replenish energy and help the other herbs work together smoothly instead of fighting each other.</td></tr>
+</tbody>
+</table>
 <hr />
 <p><em>This account is based on a real clinical case, but names and identifying details have been changed to protect patient privacy. Even with similar symptoms, the underlying cause — and therefore the treatment — can differ from person to person. This article is for general health information only and is not a substitute for medical diagnosis or treatment. If you're experiencing symptoms like these, please consult a qualified practitioner.</em></p>
     </article>
