@@ -102,5 +102,13 @@
     "cat": ["Mental Health", "Digestive Issues"],
     "weeks": "8 weeks",
     "kw_en": "anxiety heart palpitations heartburn acid reflux GERD stress flushed face hot flashes constipation morning nausea health anxiety antacid thickened heart valve"
+  },
+  {
+    "slug": "case-14-racing-heart-and-nausea-in-crowds",
+    "title": "Racing Heart and Nausea That Started in a Shopping Mall",
+    "summary": "Sudden panic-like nausea and a racing heart in crowded places, plus a fear of choking that made eating difficult, resolved in two stages as anxiety eased and lingering digestive sensitivity settled last.",
+    "cat": ["Mental Health", "Digestive Issues"],
+    "weeks": "12 weeks",
+    "kw_en": "anxiety panic attack nausea vomiting indigestion fear of eating fear of choking crowded places car sickness cold sensitivity vasovagal syncope night owl sleep schedule"
   }
 ]
