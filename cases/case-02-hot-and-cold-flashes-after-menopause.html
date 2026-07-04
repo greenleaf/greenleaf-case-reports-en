@@ -56,7 +56,16 @@
   article { font-size: 16.5px; line-height: 1.85; color: #363B2B; }
   article p { margin: 0 0 22px; }
   article strong { font-weight: 700; color: var(--ink); }
-  article h2, article strong:has(+ br) { }
+  article h2.case-head {
+    display: flex; align-items: baseline; gap: 12px;
+    font-size: 20px; font-weight: 800; letter-spacing: -0.01em; color: var(--ink);
+    line-height: 1.4; margin: 52px 0 20px;
+  }
+  article h2.case-head::before {
+    content: ''; flex-shrink: 0; width: 20px; height: 3px; border-radius: 2px;
+    background: var(--salmon); margin-top: 12px;
+  }
+  article h2.case-head:first-of-type { margin-top: 40px; }
   article ul { margin: 0 0 22px; padding-left: 20px; }
   article li { margin-bottom: 10px; }
   article hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
@@ -64,6 +73,23 @@
   .section-head {
     font-size: 13px; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase;
     color: var(--salmon); margin: 8px 0 16px; display: block;
+  }
+  .herb-table { width: 100%; border-collapse: collapse; margin: 0 0 22px; font-size: 15px; }
+  .herb-table thead th {
+    text-align: left; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text-3); font-weight: 700; padding: 0 16px 10px 0; border-bottom: 1px solid var(--border);
+  }
+  .herb-table td {
+    padding: 16px 16px 16px 0; border-bottom: 1px solid var(--border);
+    vertical-align: top; line-height: 1.6; color: #363B2B;
+  }
+  .herb-table tr:last-child td { border-bottom: none; }
+  .herb-table td:first-child {
+    width: 160px; font-weight: 800; color: var(--ink); white-space: nowrap;
+  }
+  .herb-table .pinyin {
+    display: block; font-size: 12.5px; font-weight: 500; color: var(--text-3);
+    margin-top: 2px; white-space: normal;
   }
   .cta {
     max-width: 680px; margin: 0 auto; padding: 32px 24px 80px; text-align: center;
@@ -74,7 +100,7 @@
   }
   .cta-box p { font-size: 16px; font-weight: 700; margin: 0 0 18px; }
   .cta-box a {
-    display: inline-block; background: var(--ink); color: #fff; font-weight: 700;
+    display: inline-block; background: var(--salmon); color: #fff; font-weight: 700;
     font-size: 14px; padding: 13px 28px; border-radius: 100px;
   }
   footer { text-align: center; padding: 24px; font-size: 12.5px; color: var(--text-3); border-top: 1px solid var(--border); }
@@ -83,6 +109,12 @@
     main { padding: 40px 20px 24px; }
     h1 { font-size: 24px; }
     article { font-size: 15.5px; }
+    article h2.case-head { font-size: 17.5px; margin: 40px 0 16px; }
+    .herb-table thead { display: none; }
+    .herb-table, .herb-table tbody, .herb-table tr, .herb-table td { display: block; width: auto; }
+    .herb-table tr { padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .herb-table td { padding: 2px 0; border-bottom: none; white-space: normal; }
+    .herb-table td:first-child { margin-bottom: 6px; }
   }
 </style>
 </head>
@@ -103,7 +135,7 @@
 <p>"This isn't like me at all."</p>
 <p>Before menopause, she told me, she'd been the fit, energetic, up-for-anything type. Then, on a recent island getaway with friends, everyone else was buzzing about what to do that day — and she just couldn't bring herself to care. It rattled her. "I have no idea why I'm like this," she said.</p>
 <p>Her body was sending mixed signals too. She'd feel a wave of heat, then suddenly turn cold. She sweated through the day and, worse, through the night — enough to wake her four or five times. Her mouth was constantly dry; she was gulping water all day. Constipation had gotten bad enough that she'd started taking magnesium for it. She'd already spent a year on herbs from another practitioner with barely any change.</p>
-<p><strong>Two kinds of heat, one answer</strong></p>
+<h2 class="case-head">Two kinds of heat, one answer</h2>
 <p>When the body's temperature control loses its footing after menopause, hot flashes and cold spells can show up back to back, sometimes within the same hour. That was exactly Carol's pattern. The tricky part was that these two opposite sensations don't always come from the same place. Given how much stamina she still had, how thirsty she was, and the constipation, the first read pointed toward heat pooling somewhere it shouldn't — so that's where the first formula aimed.</p>
 <p>A week later: half a win. The cold spells vanished completely, and the thirst eased. But the heat waves hadn't budged, and something new had surfaced — a low, heavy sadness she hadn't mentioned before.</p>
 <p>From here it became a process of elimination. If cooling the heat had only solved half the problem, the other half had to be coming from somewhere else. Her digestion was fine, but her hands ran cold — so the formula shifted again. Still not much movement. We adjusted once more, this time zeroing in on the night sweats, the tightness in her chest, and the broken sleep.</p>
@@ -113,12 +145,15 @@
 <hr />
 <span class="section-head">The Herbs Behind This Formula</span>
 <p>The formula that finally worked included:</p>
-<ul>
-<li><strong>Bupleurum (Chai Hu)</strong> — eases the kind of full-body tension that shows up when the system is thrown off balance, as it often is around menopause.</li>
-<li><strong>Scutellaria (Huang Qin)</strong> — clears heat that's built up and pooled in the body.</li>
-<li><strong>Trichosanthes fruit (Gua Lou Shi)</strong> — relieves the tight, heat-trapped feeling in the chest.</li>
-<li><strong>Ginger, jujube (red date), and licorice root</strong> — smooth out how the other herbs work together and replenish the body's underlying energy.</li>
-</ul>
+<table class="herb-table">
+<thead><tr><th>Herb</th><th>What It Does</th></tr></thead>
+<tbody>
+<tr><td>Bupleurum<span class="pinyin">Chai Hu</span></td><td>eases the kind of full-body tension that shows up when the system is thrown off balance, as it often is around menopause.</td></tr>
+<tr><td>Scutellaria<span class="pinyin">Huang Qin</span></td><td>clears heat that's built up and pooled in the body.</td></tr>
+<tr><td>Trichosanthes fruit<span class="pinyin">Gua Lou Shi</span></td><td>relieves the tight, heat-trapped feeling in the chest.</td></tr>
+<tr><td>Ginger, jujube (red date), and licorice root<span class="pinyin">Supporting herbs</span></td><td>smooth out how the other herbs work together and replenish the body's underlying energy.</td></tr>
+</tbody>
+</table>
 <hr />
 <p><em>This account is based on a real clinical case, but names and identifying details have been changed to protect patient privacy. Even with similar symptoms, the underlying cause — and therefore the treatment — can differ from person to person. This article is for general health information only and is not a substitute for medical diagnosis or treatment. If you're experiencing symptoms like these, please consult a qualified practitioner.</em></p>
     </article>
