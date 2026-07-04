@@ -56,7 +56,16 @@
   article { font-size: 16.5px; line-height: 1.85; color: #363B2B; }
   article p { margin: 0 0 22px; }
   article strong { font-weight: 700; color: var(--ink); }
-  article h2, article strong:has(+ br) { }
+  article h2.case-head {
+    display: flex; align-items: baseline; gap: 12px;
+    font-size: 20px; font-weight: 800; letter-spacing: -0.01em; color: var(--ink);
+    line-height: 1.4; margin: 52px 0 20px;
+  }
+  article h2.case-head::before {
+    content: ''; flex-shrink: 0; width: 20px; height: 3px; border-radius: 2px;
+    background: var(--salmon); margin-top: 12px;
+  }
+  article h2.case-head:first-of-type { margin-top: 40px; }
   article ul { margin: 0 0 22px; padding-left: 20px; }
   article li { margin-bottom: 10px; }
   article hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
@@ -64,6 +73,23 @@
   .section-head {
     font-size: 13px; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase;
     color: var(--salmon); margin: 8px 0 16px; display: block;
+  }
+  .herb-table { width: 100%; border-collapse: collapse; margin: 0 0 22px; font-size: 15px; }
+  .herb-table thead th {
+    text-align: left; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text-3); font-weight: 700; padding: 0 16px 10px 0; border-bottom: 1px solid var(--border);
+  }
+  .herb-table td {
+    padding: 16px 16px 16px 0; border-bottom: 1px solid var(--border);
+    vertical-align: top; line-height: 1.6; color: #363B2B;
+  }
+  .herb-table tr:last-child td { border-bottom: none; }
+  .herb-table td:first-child {
+    width: 160px; font-weight: 800; color: var(--ink); white-space: nowrap;
+  }
+  .herb-table .pinyin {
+    display: block; font-size: 12.5px; font-weight: 500; color: var(--text-3);
+    margin-top: 2px; white-space: normal;
   }
   .cta {
     max-width: 680px; margin: 0 auto; padding: 32px 24px 80px; text-align: center;
@@ -74,7 +100,7 @@
   }
   .cta-box p { font-size: 16px; font-weight: 700; margin: 0 0 18px; }
   .cta-box a {
-    display: inline-block; background: var(--ink); color: #fff; font-weight: 700;
+    display: inline-block; background: var(--salmon); color: #fff; font-weight: 700;
     font-size: 14px; padding: 13px 28px; border-radius: 100px;
   }
   footer { text-align: center; padding: 24px; font-size: 12.5px; color: var(--text-3); border-top: 1px solid var(--border); }
@@ -83,6 +109,12 @@
     main { padding: 40px 20px 24px; }
     h1 { font-size: 24px; }
     article { font-size: 15.5px; }
+    article h2.case-head { font-size: 17.5px; margin: 40px 0 16px; }
+    .herb-table thead { display: none; }
+    .herb-table, .herb-table tbody, .herb-table tr, .herb-table td { display: block; width: auto; }
+    .herb-table tr { padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .herb-table td { padding: 2px 0; border-bottom: none; white-space: normal; }
+    .herb-table td:first-child { margin-bottom: 6px; }
   }
 </style>
 </head>
@@ -102,11 +134,11 @@
       <p>Nancy had a calm voice. No rush in it at all — she laid out her symptoms one by one, in order. Menopause had hit five years earlier. Before that, she'd actually leaned toward constipation. But after menopause, her stool gradually loosened until it settled into ongoing diarrhea.</p>
 <p>"And my legs shake every night. Going on seven years now."</p>
 <p>Hunger or fatigue made her unusually irritable, she added. She carried extra weight in her lower body, and her skin was dry enough to flake white. She barely sweated at all. Falling asleep came easily, but she woke like clockwork at 3 or 4 a.m. and couldn't get back down.</p>
-<p><strong>An answer from outside the textbook</strong></p>
+<h2 class="case-head">An answer from outside the textbook</h2>
 <p>Treating diarrhea usually starts with one fork in the road: is this a cold-type pattern or a heat-type pattern? Nancy didn't fit cleanly into either. The bitter taste in her mouth hinted at a stress-driven pattern, but her temperament was too calm, too even-keeled, for that to be a good fit.</p>
 <p>What actually caught my attention was something else entirely: the extra weight, the near-absence of sweat, skin dry enough to flake. That combination usually signals fluid and waste sitting stagnant just under the skin, between skin and muscle. The formula built for that pattern is normally reserved for people with strong constitutions — good appetite, good sleep, good digestion. Nancy's sleep was broken and her energy was middling, so I hesitated.</p>
 <p>But looking again, her irritability and the 3 a.m. wake-ups could just as easily be read as heat building up from that same stagnation under the skin. And the diarrhea itself could be the same stagnant fluid, forced out through the wrong channel. It was an unconventional call, but I went with the formula meant to clear that surface-level stagnation.</p>
-<p><strong>News over the phone</strong></p>
+<h2 class="case-head">News over the phone</h2>
 <p>Nancy lived too far away to come in for the follow-up, so we checked in by phone a week later.</p>
 <p>"The diarrhea's stopped. My stool's normal now. And the leg shaking is noticeably better."</p>
 <p>Her fatigue had eased, and sleep had improved — she still woke, but fell back asleep quickly. I sent another month's worth.</p>
@@ -115,13 +147,16 @@
 <hr />
 <span class="section-head">The Herbs Behind This Formula</span>
 <p>The formula prescribed here included:</p>
-<ul>
-<li><strong>Ephedra (Ma Huang)</strong> — clears fluid and waste that's built up just beneath the skin, pushing it out through sweat or urine. Often used for a puffy, dry-skinned constitution like Nancy's.</li>
-<li><strong>Cinnamon twig (Gui Zhi)</strong> — helps circulation extend all the way out to the body's surface.</li>
-<li><strong>Apricot kernel (Xing Ren)</strong> — works alongside the ephedra to clear stagnant dampness.</li>
-<li><strong>Gypsum (Shi Gao)</strong> — cools heat that's built up from the stagnation.</li>
-<li><strong>Licorice root, ginger, and jujube (red date)</strong> — keep the formula's various actions working together smoothly.</li>
-</ul>
+<table class="herb-table">
+<thead><tr><th>Herb</th><th>What It Does</th></tr></thead>
+<tbody>
+<tr><td>Ephedra<span class="pinyin">Ma Huang</span></td><td>clears fluid and waste that's built up just beneath the skin, pushing it out through sweat or urine. Often used for a puffy, dry-skinned constitution like Nancy's.</td></tr>
+<tr><td>Cinnamon twig<span class="pinyin">Gui Zhi</span></td><td>helps circulation extend all the way out to the body's surface.</td></tr>
+<tr><td>Apricot kernel<span class="pinyin">Xing Ren</span></td><td>works alongside the ephedra to clear stagnant dampness.</td></tr>
+<tr><td>Gypsum<span class="pinyin">Shi Gao</span></td><td>cools heat that's built up from the stagnation.</td></tr>
+<tr><td>Licorice root, ginger, and jujube<span class="pinyin">red date</span></td><td>keep the formula's various actions working together smoothly.</td></tr>
+</tbody>
+</table>
 <hr />
 <p><em>This account is based on a real clinical case, but names and identifying details have been changed to protect patient privacy. Even with similar symptoms, the underlying cause — and therefore the treatment — can differ from person to person. This article is for general health information only and is not a substitute for medical diagnosis or treatment. If you're experiencing symptoms like these, please consult a qualified practitioner.</em></p>
     </article>
