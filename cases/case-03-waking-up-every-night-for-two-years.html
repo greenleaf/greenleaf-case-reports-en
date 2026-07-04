@@ -56,7 +56,16 @@
   article { font-size: 16.5px; line-height: 1.85; color: #363B2B; }
   article p { margin: 0 0 22px; }
   article strong { font-weight: 700; color: var(--ink); }
-  article h2, article strong:has(+ br) { }
+  article h2.case-head {
+    display: flex; align-items: baseline; gap: 12px;
+    font-size: 20px; font-weight: 800; letter-spacing: -0.01em; color: var(--ink);
+    line-height: 1.4; margin: 52px 0 20px;
+  }
+  article h2.case-head::before {
+    content: ''; flex-shrink: 0; width: 20px; height: 3px; border-radius: 2px;
+    background: var(--salmon); margin-top: 12px;
+  }
+  article h2.case-head:first-of-type { margin-top: 40px; }
   article ul { margin: 0 0 22px; padding-left: 20px; }
   article li { margin-bottom: 10px; }
   article hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
@@ -64,6 +73,23 @@
   .section-head {
     font-size: 13px; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase;
     color: var(--salmon); margin: 8px 0 16px; display: block;
+  }
+  .herb-table { width: 100%; border-collapse: collapse; margin: 0 0 22px; font-size: 15px; }
+  .herb-table thead th {
+    text-align: left; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text-3); font-weight: 700; padding: 0 16px 10px 0; border-bottom: 1px solid var(--border);
+  }
+  .herb-table td {
+    padding: 16px 16px 16px 0; border-bottom: 1px solid var(--border);
+    vertical-align: top; line-height: 1.6; color: #363B2B;
+  }
+  .herb-table tr:last-child td { border-bottom: none; }
+  .herb-table td:first-child {
+    width: 160px; font-weight: 800; color: var(--ink); white-space: nowrap;
+  }
+  .herb-table .pinyin {
+    display: block; font-size: 12.5px; font-weight: 500; color: var(--text-3);
+    margin-top: 2px; white-space: normal;
   }
   .cta {
     max-width: 680px; margin: 0 auto; padding: 32px 24px 80px; text-align: center;
@@ -74,7 +100,7 @@
   }
   .cta-box p { font-size: 16px; font-weight: 700; margin: 0 0 18px; }
   .cta-box a {
-    display: inline-block; background: var(--ink); color: #fff; font-weight: 700;
+    display: inline-block; background: var(--salmon); color: #fff; font-weight: 700;
     font-size: 14px; padding: 13px 28px; border-radius: 100px;
   }
   footer { text-align: center; padding: 24px; font-size: 12.5px; color: var(--text-3); border-top: 1px solid var(--border); }
@@ -83,6 +109,12 @@
     main { padding: 40px 20px 24px; }
     h1 { font-size: 24px; }
     article { font-size: 15.5px; }
+    article h2.case-head { font-size: 17.5px; margin: 40px 0 16px; }
+    .herb-table thead { display: none; }
+    .herb-table, .herb-table tbody, .herb-table tr, .herb-table td { display: block; width: auto; }
+    .herb-table tr { padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .herb-table td { padding: 2px 0; border-bottom: none; white-space: normal; }
+    .herb-table td:first-child { margin-bottom: 6px; }
   }
 </style>
 </head>
@@ -102,10 +134,10 @@
       <p>Robin made a great first impression — soft-featured, warm-eyed, the kind of person you'd peg as easygoing within thirty seconds of meeting her. But underneath that, she'd been fighting insomnia every night for two years.</p>
 <p>"Falling asleep isn't the problem. It's staying asleep. I wake up and it's like I never slept at all."</p>
 <p>On stressful workdays, even falling asleep was a struggle. Underneath it all sat a low hum of anxiety that never quite switched off. Lately her scalp had gotten unbearably itchy too, with dandruff flaking up out of nowhere. A few other things stood out once we dug in: a dry mouth, a tight, heavy feeling in the chest, frequent bathroom trips. She carried some extra weight, but it wasn't firm — more like puffiness, like her body was holding onto water it didn't need.</p>
-<p><strong>Two problems tangled together</strong></p>
+<h2 class="case-head">Two problems tangled together</h2>
 <p>Two separate issues were layered on top of each other here. One was stress sitting like a lump in her chest. The other was fluid that wasn't circulating properly and kept pooling in the wrong places. The puffiness, the frequent urination, the scalp trouble — all pointed to that second issue.</p>
 <p>There were formulas for each problem individually, but using just one risked solving only half the picture. A formula aimed at the chest tightness wouldn't touch the fluid retention, and a formula built for fluid circulation would likely leave the chest tightness untouched. So I combined the two.</p>
-<p><strong>A week later — and one unexpected change</strong></p>
+<h2 class="case-head">A week later — and one unexpected change</h2>
 <p>Robin came back a week later looking noticeably lighter.</p>
 <p>"The chest tightness is gone. The scalp itching's gone. I'm barely waking up at night. I can't remember the last time getting up in the morning was this easy."</p>
 <p>Then she added something that caught my attention.</p>
@@ -114,12 +146,15 @@
 <hr />
 <span class="section-head">The Herbs Behind This Formula</span>
 <p>This case called for two formulas combined into one.</p>
-<ul>
-<li><strong>Bupleurum and Scutellaria</strong> — together, they clear the stress-driven tightness that sits in the chest.</li>
-<li><strong>Alisma, Polyporus, Poria, and Atractylodes</strong> — this group moves fluid that's pooling where it shouldn't and helps the body clear it out. Commonly used for puffiness, frequent urination, and skin irritation.</li>
-<li><strong>Cinnamon twig (Gui Zhi)</strong> — supports overall circulation so the other herbs can do their work more effectively.</li>
-<li><strong>Ginseng, Pinellia, licorice root, ginger, and jujube (red date)</strong> — replenish the body's energy and keep the whole formula working in balance.</li>
-</ul>
+<table class="herb-table">
+<thead><tr><th>Herb</th><th>What It Does</th></tr></thead>
+<tbody>
+<tr><td>Bupleurum and Scutellaria<span class="pinyin">Supporting herbs</span></td><td>together, they clear the stress-driven tightness that sits in the chest.</td></tr>
+<tr><td>Alisma, Polyporus, Poria, and Atractylodes<span class="pinyin">Supporting herbs</span></td><td>this group moves fluid that's pooling where it shouldn't and helps the body clear it out. Commonly used for puffiness, frequent urination, and skin irritation.</td></tr>
+<tr><td>Cinnamon twig<span class="pinyin">Gui Zhi</span></td><td>supports overall circulation so the other herbs can do their work more effectively.</td></tr>
+<tr><td>Ginseng, Pinellia, licorice root, ginger, and jujube<span class="pinyin">red date</span></td><td>replenish the body's energy and keep the whole formula working in balance.</td></tr>
+</tbody>
+</table>
 <hr />
 <p><em>This account is based on a real clinical case, but names and identifying details have been changed to protect patient privacy. Even with similar symptoms, the underlying cause — and therefore the treatment — can differ from person to person. This article is for general health information only and is not a substitute for medical diagnosis or treatment. If you're experiencing symptoms like these, please consult a qualified practitioner.</em></p>
     </article>
