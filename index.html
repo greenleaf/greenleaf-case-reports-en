@@ -192,7 +192,7 @@ let active = "All";
 
 async function loadCases(){
   try {
-    const res = await fetch('cases.json');
+    const res = await fetch('cases.json?v=' + Date.now(), { cache: 'no-store' });
     cases = await res.json();
   } catch(e) {
     document.getElementById('list').innerHTML = '<div class="empty-state"><p>Could not load cases.json. This page needs to be served over http (e.g. via GitHub Pages or a local server), not opened directly as a file.</p></div>';
