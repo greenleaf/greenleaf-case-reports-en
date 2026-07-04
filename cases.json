@@ -86,5 +86,13 @@
     "cat": "Mental Health",
     "weeks": "9 weeks",
     "kw_en": "depression anxiety fatigue insomnia elevated heart rate high pulse night sweats running hot loose stools frequent urination stress burnout loss of motivation"
+  },
+  {
+    "slug": "case-12-five-years-of-insomnia",
+    "title": "Five Years of Insomnia, and a Mind That Wouldn't Switch Off at Night",
+    "summary": "Five years of exhausting, wide-awake nights that worsened after breast cancer treatment, resolved by addressing both nervous tension and an underlying fluid imbalance.",
+    "cat": ["Mental Health", "Cancer & Chemotherapy"],
+    "weeks": "10 weeks",
+    "kw_en": "insomnia can't fall asleep chronic sleep problems breast cancer treatment dry mouth frequent urination loose stools chest hollowness dry eyes shoulder pain leg numbness elderly"
   }
 ]
