@@ -210,7 +210,7 @@ async function loadCases(){
 }
 
 function countFor(cat){
-  return cases.filter(c => c.cat === cat).length;
+  return cases.filter(c => Array.isArray(c.cat) ? c.cat.includes(cat) : c.cat === cat).length;
 }
 
 function renderFilters(){
@@ -232,7 +232,7 @@ function renderFilters(){
 
 function renderList(){
   const query = document.getElementById('q').value.trim().toLowerCase();
-  let filtered = active === 'All' ? cases : cases.filter(c => c.cat === active);
+  let filtered = active === 'All' ? cases : cases.filter(c => Array.isArray(c.cat) ? c.cat.includes(active) : c.cat === active);
   if (query){
     filtered = filtered.filter(c =>
       c.title.toLowerCase().includes(query) ||
@@ -259,7 +259,7 @@ function renderList(){
         <span class="weeks-badge">Recovered in ${c.weeks}</span>
       </div>
       <div class="case-summary">${c.summary}</div>
-      <div class="case-cat">${c.cat}</div>
+      <div class="case-cat">${Array.isArray(c.cat) ? c.cat.join(' · ') : c.cat}</div>
     </a>
   `).join('');
 }
