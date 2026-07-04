@@ -56,7 +56,16 @@
   article { font-size: 16.5px; line-height: 1.85; color: #363B2B; }
   article p { margin: 0 0 22px; }
   article strong { font-weight: 700; color: var(--ink); }
-  article h2, article strong:has(+ br) { }
+  article h2.case-head {
+    display: flex; align-items: baseline; gap: 12px;
+    font-size: 20px; font-weight: 800; letter-spacing: -0.01em; color: var(--ink);
+    line-height: 1.4; margin: 52px 0 20px;
+  }
+  article h2.case-head::before {
+    content: ''; flex-shrink: 0; width: 20px; height: 3px; border-radius: 2px;
+    background: var(--salmon); margin-top: 12px;
+  }
+  article h2.case-head:first-of-type { margin-top: 40px; }
   article ul { margin: 0 0 22px; padding-left: 20px; }
   article li { margin-bottom: 10px; }
   article hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
@@ -64,6 +73,23 @@
   .section-head {
     font-size: 13px; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase;
     color: var(--salmon); margin: 8px 0 16px; display: block;
+  }
+  .herb-table { width: 100%; border-collapse: collapse; margin: 0 0 22px; font-size: 15px; }
+  .herb-table thead th {
+    text-align: left; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text-3); font-weight: 700; padding: 0 16px 10px 0; border-bottom: 1px solid var(--border);
+  }
+  .herb-table td {
+    padding: 16px 16px 16px 0; border-bottom: 1px solid var(--border);
+    vertical-align: top; line-height: 1.6; color: #363B2B;
+  }
+  .herb-table tr:last-child td { border-bottom: none; }
+  .herb-table td:first-child {
+    width: 160px; font-weight: 800; color: var(--ink); white-space: nowrap;
+  }
+  .herb-table .pinyin {
+    display: block; font-size: 12.5px; font-weight: 500; color: var(--text-3);
+    margin-top: 2px; white-space: normal;
   }
   .cta {
     max-width: 680px; margin: 0 auto; padding: 32px 24px 80px; text-align: center;
@@ -74,7 +100,7 @@
   }
   .cta-box p { font-size: 16px; font-weight: 700; margin: 0 0 18px; }
   .cta-box a {
-    display: inline-block; background: var(--ink); color: #fff; font-weight: 700;
+    display: inline-block; background: var(--salmon); color: #fff; font-weight: 700;
     font-size: 14px; padding: 13px 28px; border-radius: 100px;
   }
   footer { text-align: center; padding: 24px; font-size: 12.5px; color: var(--text-3); border-top: 1px solid var(--border); }
@@ -83,6 +109,12 @@
     main { padding: 40px 20px 24px; }
     h1 { font-size: 24px; }
     article { font-size: 15.5px; }
+    article h2.case-head { font-size: 17.5px; margin: 40px 0 16px; }
+    .herb-table thead { display: none; }
+    .herb-table, .herb-table tbody, .herb-table tr, .herb-table td { display: block; width: auto; }
+    .herb-table tr { padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .herb-table td { padding: 2px 0; border-bottom: none; white-space: normal; }
+    .herb-table td:first-child { margin-bottom: 6px; }
   }
 </style>
 </head>
@@ -102,10 +134,10 @@
       <p>Maria came in with wide, worried eyes. She'd moved from South America to study abroad on her own, and simply being far from home, managing everything by herself, was a constant weight.</p>
 <p>"Two years ago, something really frightening happened to me in the U.S."</p>
 <p>She didn't go further than that, and I didn't push. What she did tell me was that ever since, panic attacks would hit her out of nowhere. The odd part was where they started: almost always in her stomach. Stomach pain, bloating, diarrhea. When her mind spiraled, her gut led the charge before anything else caught up. Mornings, she said, were the hardest part of the day — the anxiety was always worst right when she opened her eyes.</p>
-<p><strong>A signal that starts in the gut, not the head</strong></p>
+<h2 class="case-head">A signal that starts in the gut, not the head</h2>
 <p>When panic and anxiety travel together with digestive symptoms, the pathway looks different from person to person. Some people feel it first in a tightening chest. Maria felt it first in her stomach turning over. A few details helped narrow things down. Her anxiety ran high, but sleep wasn't a problem — which ruled out one common pattern. Her hands and feet ran cold, but not in the way that usually points toward a different, more classic nervous pattern. What settled it was how squarely her symptoms clustered around digestion.</p>
 <p>Even so, the picture wasn't entirely clean — a few symptoms I'd expect to see alongside this pattern weren't showing up clearly. So instead of sending her home with a long course, I started her on just two days' worth as a trial.</p>
-<p><strong>Two days, then a week, then three weeks</strong></p>
+<h2 class="case-head">Two days, then a week, then three weeks</h2>
 <p>Two days later, something had shifted. Her morning anxiety, in particular, had noticeably eased. The gas and diarrhea, though, hadn't moved. A week's worth more, and her stool started improving too. "I can feel myself settling," she told me.</p>
 <p>Two more weeks after that — three weeks in total — Maria came back and said:</p>
 <p>"I wake up now and that dread is barely there anymore."</p>
@@ -113,12 +145,15 @@
 <hr />
 <span class="section-head">The Herbs Behind This Formula</span>
 <p>The formula prescribed here included:</p>
-<ul>
-<li><strong>Bupleurum (Chai Hu)</strong> — eases the kind of tension that builds up under stress and anxiety.</li>
-<li><strong>Poria (Fu Ling)</strong> — settles discomfort that clusters around the digestive system and helps calm the mind.</li>
-<li><strong>Pinellia (Ban Xia)</strong> — relieves bloating and nausea.</li>
-<li><strong>Ginseng, licorice root, ginger, and jujube (red date)</strong> — replenish depleted energy and keep the formula's other actions working together smoothly.</li>
-</ul>
+<table class="herb-table">
+<thead><tr><th>Herb</th><th>What It Does</th></tr></thead>
+<tbody>
+<tr><td>Bupleurum<span class="pinyin">Chai Hu</span></td><td>eases the kind of tension that builds up under stress and anxiety.</td></tr>
+<tr><td>Poria<span class="pinyin">Fu Ling</span></td><td>settles discomfort that clusters around the digestive system and helps calm the mind.</td></tr>
+<tr><td>Pinellia<span class="pinyin">Ban Xia</span></td><td>relieves bloating and nausea.</td></tr>
+<tr><td>Ginseng, licorice root, ginger, and jujube<span class="pinyin">red date</span></td><td>replenish depleted energy and keep the formula's other actions working together smoothly.</td></tr>
+</tbody>
+</table>
 <hr />
 <p><em>This account is based on a real clinical case, but names and identifying details have been changed to protect patient privacy. Even with similar symptoms, the underlying cause — and therefore the treatment — can differ from person to person. This article is for general health information only and is not a substitute for medical diagnosis or treatment. If you're experiencing symptoms like these, please consult a qualified practitioner.</em></p>
     </article>
