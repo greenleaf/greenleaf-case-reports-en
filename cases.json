@@ -110,5 +110,13 @@
     "cat": ["Mental Health", "Digestive Issues"],
     "weeks": "12 weeks",
     "kw_en": "anxiety panic attack nausea vomiting indigestion fear of eating fear of choking crowded places car sickness cold sensitivity vasovagal syncope night owl sleep schedule"
+  },
+  {
+    "slug": "case-15-stomach-fullness-during-job-search",
+    "title": "A Stomach That Wouldn't Settle While He Waited for a Job Offer",
+    "summary": "A week of stubborn fullness below the breastbone and job-search anxiety, both resolved once treatment restored the gut lining's ability to absorb fluid.",
+    "cat": ["Digestive Issues", "Mental Health"],
+    "weeks": "2 weeks",
+    "kw_en": "indigestion fullness bloating anxiety unemployment job search stress shortness of breath hot flush cold intolerance loose stools frequent urination facial swelling low energy"
   }
 ]
