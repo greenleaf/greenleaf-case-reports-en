@@ -150,5 +150,13 @@
     "cat": ["Digestive Issues", "Uterine Conditions"],
     "weeks": "4 weeks",
     "kw_en": "indigestion abdominal pain diarrhea stress irritable bowel menstrual pain period pain irregular period clots cold hands feet hot flush sighing dry lips eye fatigue"
+  },
+  {
+    "slug": "case-20-abdominal-pain-that-suddenly-spiked",
+    "title": "Years of Heartburn and Bloating, and the Abdominal Pain That Suddenly Spiked",
+    "summary": "Years of burping, bloating, and severe heartburn, plus abdominal pain that suddenly intensified under stress, eased by releasing gut muscle tension and warming circulation to the area.",
+    "cat": "Digestive Issues",
+    "weeks": "3 weeks",
+    "kw_en": "abdominal pain heartburn acid reflux bloating burping constipation diarrhea alternating stress worse at night cold feet banker"
   }
 ]
