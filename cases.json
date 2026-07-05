@@ -118,5 +118,37 @@
     "cat": ["Digestive Issues", "Mental Health"],
     "weeks": "2 weeks",
     "kw_en": "indigestion fullness bloating anxiety unemployment job search stress shortness of breath hot flush cold intolerance loose stools frequent urination facial swelling low energy"
+  },
+  {
+    "slug": "case-16-two-years-of-itching-no-rash",
+    "title": "Two Years of Itching and Tingling That No Rash Could Explain",
+    "summary": "Two years of unexplained tingling, numbness, and itching with no rash, resolved once treatment warmed surface circulation and helped a stalled sweating process complete itself.",
+    "cat": "Skin Conditions",
+    "weeks": "4 weeks",
+    "kw_en": "skin tingling numbness itching no rash cold sensitivity cold feet swelling shoulder neck stiffness low energy menstrual pain fatigue"
+  },
+  {
+    "slug": "case-17-panic-symptoms-sweaty-rehearsal",
+    "title": "Three Years of Panic Symptoms That Started With One Sweaty Rehearsal",
+    "summary": "Years of anxiety, a racing heart, and sweating only below the waist, resolved once treatment addressed a misfiring sweat-regulation switch instead of the anxiety itself.",
+    "cat": "Mental Health",
+    "weeks": "2 weeks",
+    "kw_en": "anxiety panic attack heart palpitations racing heart heat intolerance abnormal sweating below the waist trembling hands chest tightness shortness of breath dancer trauma stress"
+  },
+  {
+    "slug": "case-18-nausea-after-one-bad-night",
+    "title": "A Month of Nausea That Started With One Bad Night",
+    "summary": "A month of relentless nausea that began after one severe vomiting episode, resolved with a simple two-herb formula once every other system checked out clean.",
+    "cat": "Digestive Issues",
+    "weeks": "2 weeks",
+    "kw_en": "nausea vomiting morning nausea appetite intact fatigue palpitations stomach upset no indigestion student"
+  },
+  {
+    "slug": "case-19-indigestion-period-pain-hidden-problem",
+    "title": "Three Years of Indigestion and Period Pain, and the Real Problem Hiding Underneath",
+    "summary": "Three years of poor digestion, recurring abdominal pain with diarrhea, and severe menstrual pain, resolved once treatment shifted twice and uncovered the real underlying issue.",
+    "cat": ["Digestive Issues", "Uterine Conditions"],
+    "weeks": "4 weeks",
+    "kw_en": "indigestion abdominal pain diarrhea stress irritable bowel menstrual pain period pain irregular period clots cold hands feet hot flush sighing dry lips eye fatigue"
   }
 ]
