@@ -362,5 +362,43 @@
     ],
     "weeks": "3 weeks",
     "kw_en": "fatigue heavy menstrual bleeding irritability anxiety cold intolerance constipation diarrhea puffy face weak energy"
+  },
+  {
+    "slug": "case-40-full-body-hives-thirst-heat",
+    "title": "Full-Body Hives \u2014 The Clue Was in the Thirst and Heat",
+    "summary": "Months of full-body hives that resisted a heat-clearing formula until heartburn revealed the inflammation had spread beyond the skin, resolved once treatment addressed both the vessels and the mucosal lining.",
+    "cat": "Skin Conditions",
+    "weeks": "10 weeks",
+    "kw_en": "chronic hives urticaria full body rash itching heat intolerance thirst heavy sweating heartburn antihistamine skin condition"
+  },
+  {
+    "slug": "case-41-bedwetting-college-student-returns",
+    "title": "A Boy Treated for Bedwetting a Decade Ago Returns as a College Student",
+    "summary": "A childhood bedwetting case resolved a decade ago by recognizing a heat pattern hiding behind apparent cold intolerance, and the same underlying constitution resurfacing years later as adult irritability and chest tightness.",
+    "cat": [
+      "Mental Health",
+      "Pediatrics"
+    ],
+    "weeks": "4 weeks",
+    "kw_en": "nocturnal enuresis bedwetting ADHD childhood attention difficulties irritability chest tightness college student excess heat sugar soda"
+  },
+  {
+    "slug": "case-42-anxiety-fixed-point-abdominal-pain",
+    "title": "Anxiety and Lower Right Abdominal Pain \u2014 What a Single Fixed Point of Pain Revealed",
+    "summary": "Anxiety-driven abdominal pain and diarrhea that mostly resolved with one formula, except for pain fixed at a single point \u2014 the clue that pointed to a separate, localized inflammation underneath.",
+    "cat": [
+      "Mental Health",
+      "Digestive Issues"
+    ],
+    "weeks": "4 weeks",
+    "kw_en": "anxiety lower right abdominal pain diarrhea alternating constipation cold sweaty hands feet localized inflammation fixed point pain"
+  },
+  {
+    "slug": "case-43-frequent-urination-decade-sexual-activity",
+    "title": "Over a Decade of Frequent Urination \u2014 Why It Worsened After One Specific Activity",
+    "summary": "Over a decade of frequent nighttime urination that worsened after sexual activity, resolved slowly once circulation-supporting herbs were added to the usual formula.",
+    "cat": "Men's Health",
+    "weeks": "4 weeks",
+    "kw_en": "frequent urination nocturia over ten years sexual activity cold hands feet anxious constitution circulation urinary frequency"
   }
 ]
