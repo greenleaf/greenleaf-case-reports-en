@@ -400,5 +400,16 @@
     "cat": "Men's Health",
     "weeks": "4 weeks",
     "kw_en": "frequent urination nocturia over ten years sexual activity cold hands feet anxious constitution circulation urinary frequency"
+  },
+  {
+    "slug": "case-44-quick-tempered-achy-bellied-child",
+    "title": "A Quick-Tempered, Achy-Bellied Child \u2014 When the Tension Eased, So Did the Bowels",
+    "summary": "A preschool boy's quick temper, constipation, and abdominal pain traced to the same abdominal muscle tension, resolved together as one formula eased that tension throughout the body.",
+    "cat": [
+      "Pediatrics",
+      "Digestive Issues"
+    ],
+    "weeks": "4 weeks",
+    "kw_en": "irritability temper tantrums constipation abdominal pain child preschool pediatric rectus abdominis tension poor appetite"
   }
 ]
