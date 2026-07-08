@@ -17,7 +17,7 @@
   },
   {
     "slug": "case-03-waking-up-every-night-for-two-years",
-    "title": "Waking Up Every Night for Two Years — Plus an Itchy Scalp No One Could Explain",
+    "title": "Waking Up Every Night for Two Years \u2014 Plus an Itchy Scalp No One Could Explain",
     "summary": "Constant nighttime waking and low-grade anxiety, alongside scalp itching and dandruff that came out of nowhere.",
     "cat": "Mental Health",
     "weeks": "4 weeks",
@@ -75,7 +75,10 @@
     "slug": "case-10-racing-heart-and-irregular-period-after-miscarriage",
     "title": "Anxiety, a Racing Heart, and a Period That Wouldn't Settle After a Miscarriage",
     "summary": "Heavy, twice-monthly bleeding and panic-like anxiety after a miscarriage, resolved once treatment shifted from replenishing blood to releasing a hidden tension.",
-    "cat": ["Uterine Conditions", "Fertility"],
+    "cat": [
+      "Uterine Conditions",
+      "Fertility"
+    ],
     "weeks": "3 weeks",
     "kw_en": "irregular period heavy bleeding miscarriage D&C anxiety panic attack heart palpitations racing heart fatigue anemia lightheaded bloating gas fertility pregnancy"
   },
@@ -91,7 +94,10 @@
     "slug": "case-12-five-years-of-insomnia",
     "title": "Five Years of Insomnia, and a Mind That Wouldn't Switch Off at Night",
     "summary": "Five years of exhausting, wide-awake nights that worsened after breast cancer treatment, resolved by addressing both nervous tension and an underlying fluid imbalance.",
-    "cat": ["Mental Health", "Cancer & Chemotherapy"],
+    "cat": [
+      "Mental Health",
+      "Cancer & Chemotherapy"
+    ],
     "weeks": "10 weeks",
     "kw_en": "insomnia can't fall asleep chronic sleep problems breast cancer treatment dry mouth frequent urination loose stools chest hollowness dry eyes shoulder pain leg numbness elderly"
   },
@@ -99,7 +105,10 @@
     "slug": "case-13-anxiety-palpitations-and-heartburn",
     "title": "Three Symptoms, Fifteen Years, and One Hidden Source",
     "summary": "Anxiety, racing-heart palpitations that had lingered for fifteen years, and long-standing heartburn, all traced back to the same overflow of digestive heat.",
-    "cat": ["Mental Health", "Digestive Issues"],
+    "cat": [
+      "Mental Health",
+      "Digestive Issues"
+    ],
     "weeks": "8 weeks",
     "kw_en": "anxiety heart palpitations heartburn acid reflux GERD stress flushed face hot flashes constipation morning nausea health anxiety antacid thickened heart valve"
   },
@@ -107,7 +116,10 @@
     "slug": "case-14-racing-heart-and-nausea-in-crowds",
     "title": "Racing Heart and Nausea That Started in a Shopping Mall",
     "summary": "Sudden panic-like nausea and a racing heart in crowded places, plus a fear of choking that made eating difficult, resolved in two stages as anxiety eased and lingering digestive sensitivity settled last.",
-    "cat": ["Mental Health", "Digestive Issues"],
+    "cat": [
+      "Mental Health",
+      "Digestive Issues"
+    ],
     "weeks": "12 weeks",
     "kw_en": "anxiety panic attack nausea vomiting indigestion fear of eating fear of choking crowded places car sickness cold sensitivity vasovagal syncope night owl sleep schedule"
   },
@@ -115,7 +127,10 @@
     "slug": "case-15-stomach-fullness-during-job-search",
     "title": "A Stomach That Wouldn't Settle While He Waited for a Job Offer",
     "summary": "A week of stubborn fullness below the breastbone and job-search anxiety, both resolved once treatment restored the gut lining's ability to absorb fluid.",
-    "cat": ["Digestive Issues", "Mental Health"],
+    "cat": [
+      "Digestive Issues",
+      "Mental Health"
+    ],
     "weeks": "2 weeks",
     "kw_en": "indigestion fullness bloating anxiety unemployment job search stress shortness of breath hot flush cold intolerance loose stools frequent urination facial swelling low energy"
   },
@@ -147,7 +162,10 @@
     "slug": "case-19-indigestion-period-pain-hidden-problem",
     "title": "Three Years of Indigestion and Period Pain, and the Real Problem Hiding Underneath",
     "summary": "Three years of poor digestion, recurring abdominal pain with diarrhea, and severe menstrual pain, resolved once treatment shifted twice and uncovered the real underlying issue.",
-    "cat": ["Digestive Issues", "Uterine Conditions"],
+    "cat": [
+      "Digestive Issues",
+      "Uterine Conditions"
+    ],
     "weeks": "4 weeks",
     "kw_en": "indigestion abdominal pain diarrhea stress irritable bowel menstrual pain period pain irregular period clots cold hands feet hot flush sighing dry lips eye fatigue"
   },
@@ -163,8 +181,76 @@
     "slug": "case-21-bloating-depression-muscle-tension",
     "title": "A Year of Bloating and Low Mood, and the Muscle Tension That Herbs Couldn't Fully Release",
     "summary": "A year of abdominal bloating, fatigue, and depression traced to a tense band of abdominal muscle, resolved once herbs and finally a single needling session released the remaining tension.",
-    "cat": ["Digestive Issues", "Mental Health"],
+    "cat": [
+      "Digestive Issues",
+      "Mental Health"
+    ],
     "weeks": "7 weeks",
     "kw_en": "bloating abdominal distension fatigue depression low mood irritability palpitations frequent urination headache dry mouth abdominal muscle tension trigger point acupuncture"
+  },
+  {
+    "slug": "case-22-diarrhea-after-meat",
+    "title": "Diarrhea After Every Meal With Meat, and the Formula That Finally Changed Course",
+    "summary": "Years of diarrhea and pain triggered specifically by eating meat, resolved once treatment shifted from calming stress to clearing heat-type inflammation in the gut lining.",
+    "cat": "Digestive Issues",
+    "weeks": "5 weeks",
+    "kw_en": "diarrhea abdominal pain IBS meat triggered food sensitivity heat intolerance dry mouth thirst frequent urination palpitations leg sensation motion sickness"
+  },
+  {
+    "slug": "case-23-seven-years-diarrhea-bloating",
+    "title": "Seven Years of Diarrhea and Bloating, and the Quiet Temperament That Hid the Real Signal",
+    "summary": "Seven years of unexplained diarrhea and constant bloating, resolved once treatment moved past an introverted temperament to follow what the body itself was showing.",
+    "cat": [
+      "Digestive Issues",
+      "Mental Health"
+    ],
+    "weeks": "6 weeks",
+    "kw_en": "diarrhea bloating abdominal pain seven years IBS stress anxiety cold hands feet introverted temperament rectus abdominis tenderness incomplete emptying"
+  },
+  {
+    "slug": "case-24-elevator-claustrophobia-heartburn",
+    "title": "The Man Who Couldn't Ride an Elevator, and the Heartburn That Wouldn't Quit",
+    "summary": "A year of claustrophobia and daily heartburn that resolved in two stages, once a single added herb finally let the eroded gastric lining heal.",
+    "cat": [
+      "Mental Health",
+      "Digestive Issues"
+    ],
+    "weeks": "8 weeks",
+    "kw_en": "claustrophobia acid reflux heartburn GERD antacid chest tightness palpitations elevator confined spaces stress anxiety anger flushed face"
+  },
+  {
+    "slug": "case-25-fatigue-bloating-diarrhea",
+    "title": "Three to Four Years of Fatigue, Bloating, and Diarrhea, Resolved by One Formula",
+    "summary": "Three to four years of fatigue, bloating, and diarrhea from a body running hot above and cold below, resolved with one formula addressing both at once.",
+    "cat": "Digestive Issues",
+    "weeks": "4 weeks",
+    "kw_en": "fatigue bloating diarrhea loose stools thirst dry mouth chest tightness heat and cold intolerance stress low stamina appetite loss"
+  },
+  {
+    "slug": "case-26-anxiety-panic-loud-noise",
+    "title": "Anxiety and Panic That Began With One Loud Noise",
+    "summary": "Anxiety and nightly palpitations that began after a single startling noise, resolved only after moving past calming fear to treat the nervous system's reactivity directly.",
+    "cat": "Mental Health",
+    "weeks": "12 weeks",
+    "kw_en": "anxiety palpitations panic attack startle response tinnitus ear sensitivity tongue numbness insomnia waking at night swelling depression emergency room"
+  },
+  {
+    "slug": "case-27-panic-on-a-plane",
+    "title": "Panic That Began on a Plane, Resolved in Time to Travel Again",
+    "summary": "Panic attacks that began on a flight and spread to cars and elevators, resolved by widening treatment to include circulation and muscle tension alongside nervous system calming.",
+    "cat": "Mental Health",
+    "weeks": "11 weeks",
+    "kw_en": "panic attack anxiety palpitations claustrophobia travel flight elevator car cold hands feet chest tightness shortness of breath PMS perfectionist international student"
+  },
+  {
+    "slug": "case-28-depression-insomnia-chest-tightness",
+    "title": "A Lifetime of Depression and Insomnia, and the Chest Tightness That Started With Every Meal",
+    "summary": "Lifelong depression and insomnia that finally lifted once treatment traced chest tightness after every meal back to a specific digestive-respiratory pattern.",
+    "cat": [
+      "Mental Health",
+      "Digestive Issues"
+    ],
+    "weeks": "5 weeks",
+    "kw_en": "depression insomnia chest tightness shortness of breath meal triggered digestive issues bloating nausea headache menstrual pain childhood"
   }
 ]
